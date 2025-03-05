@@ -95,8 +95,13 @@ Finalmente, para emplear este repositorio, con sus respectivos requerimientos y 
 ## Estructura del proyecto
 Neuronal_Network_Numpy_2230002/
 ├── neural_network.py       # Implementación principal de la red neuronal
+
 ├── activation_functions.py # Contiene funciones de activación y sus derivadas
+
 ├── utils.py                # Funciones de utilidad para preprocesamiento de datos
+
 ├── main.py                 # Código principal para entrenar y probar la red
+
 ├── README.md               # Este archivo
+
 └── requirements.txt        # Lista de dependencias
