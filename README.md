@@ -60,10 +60,12 @@ python3 -m venv nombre_del_entorno
 Sigue estos pasos para clonar y configurar el proyecto en tu máquina local:
 
 1. Clona este repositorio:
+        
         ```
         git clone https://github.com/MaxGm07/Neuronal_Network_Numpy_2230002.git
         cd Neuronal_Network_Numpy_2230002
         ```
+
 2. Crea un nuevo entorno virtual (se describe mejor el procedimiento en el apartado de Nota).
 3. Instala las dependencias requeridas (recomendado: dentro del entorno virtual):
     pip install -r requirements.txt
