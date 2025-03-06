@@ -35,7 +35,11 @@ Se puede comprobar la versión de python empleando el comando en terminal:
 
 **En PowerShell:**
 
+  python --version
+
 **En Unix**
+
+  python3 --version
 
 Librerías (dependencias):
 - **NumPy**: Para cálculos numéricos y manejo de arreglos.
