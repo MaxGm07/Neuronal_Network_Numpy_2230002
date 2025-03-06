@@ -1,4 +1,4 @@
-from src.Numpy_Neuronal_Network import train_neural_network
+from Neuronal_Network_Numpy import train_neural_network
 
 def main():
 
