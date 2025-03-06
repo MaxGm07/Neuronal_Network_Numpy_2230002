@@ -57,7 +57,7 @@ pip install numpy matplotlib scikit-learn
 El proyecto está organizado de la siguiente manera:
 
 ``` bash
-TAREA_3/
+Neuronal_Network_Numpy_2230002/
 │
 ├── src/
 │   └── Neuronal_Network_Numpy.py  # Script principal de la red neuronal
