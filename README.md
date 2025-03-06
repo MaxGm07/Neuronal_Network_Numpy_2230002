@@ -112,7 +112,7 @@ python main.py
 
 **Scikit-learn**: Para generar datos sintéticos.
 
-## 🧑‍💻 ¿Qué hace el código?
+## Explicación del código
 El código realiza lo siguiente:
 
 1. **Genera un conjunto de datos sintético** utilizando distribuciones gaussianas.
@@ -123,11 +123,56 @@ El código realiza lo siguiente:
 
     * **ReLU**: Para las capas ocultas.
 
-3. **Inicializa los parámetros** de la red neuronal (pesos y sesgos).
+3. **Inicializa los parámetros** 
+  
+Los pesos (weights) y sesgos (biases) de la red neuronal se inicializan aleatoriamente.
+
+Para una red con una capa oculta de n neuronas y una capa de salida de m neuronas:
+
+    Pesos de la capa oculta: W1 (matriz de tamaño n_features x n)
+
+    Sesgos de la capa oculta: b1 (vector de tamaño 1 x n)
+
+    Pesos de la capa de salida: W2 (matriz de tamaño n x m)
+
+    Sesgos de la capa de salida: b2 (vector de tamaño 1 x m)
 
 4. **Entrena la red neuronal** utilizando propagación hacia adelante y hacia atrás.
+
+En esta fase, los datos de entrada se propagan a través de la red para obtener las predicciones.
+
+Pasos:
+-(Forward Propagation)
+    Multiplicar las entradas por los pesos y sumar los sesgos.
+
+    Aplicar la función de activación ReLU en la capa oculta.
+
+    Multiplicar la salida de la capa oculta por los pesos de la capa de salida y sumar los sesgos.
+
+    Aplicar la función de activación Sigmoid en la capa de salida.
+
+-(Loss)
+  Se utiliza la función de pérdida de entropía cruzada binaria (binary cross-entropy) para medir el error entre las predicciones y las etiquetas reales.
+
+-(Backpropagation)
+En esta fase, se calculan los gradientes de la pérdida con respecto a los pesos y sesgos para actualizarlos.
+
+    Calcular el gradiente de la pérdida con respecto a la salida (dA2).
+
+    Calcular el gradiente de la pérdida con respecto a Z2 (capa de salida).
+
+    Calcular los gradientes de W2 y b2.
+
+    Calcular el gradiente de la pérdida con respecto a A1.
+
+    Calcular el gradiente de la pérdida con respecto a Z1 (capa oculta).
+
+    Calcular los gradientes de W1 y b1.
+
+Por último se actualizan los pesos y sesgos mediante el algoritmo del gradiente descendiente.
+Posterior a ello, la red neuronal se entrena mediante épocas definidas en el código
 
 5. **Evalúa el modelo** clasificando nuevos datos y visualizando los resultados.
 
 ## Notas extra
-¡Gracias por llegar al final del readme, espero tengas un buen día!
+¡Gracias por llegar al final del readme, agradezco tu tiempo, espero tengas un buen día!
