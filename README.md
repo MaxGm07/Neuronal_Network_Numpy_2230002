@@ -129,13 +129,13 @@ Los pesos (weights) y sesgos (biases) de la red neuronal se inicializan aleatori
 
 Para una red con una capa oculta de n neuronas y una capa de salida de m neuronas:
 
-    Pesos de la capa oculta: W1 (matriz de tamaño n_features x n)
+  *  Pesos de la capa oculta: W1 (matriz de tamaño n_features x n)
 
-    Sesgos de la capa oculta: b1 (vector de tamaño 1 x n)
+  *  Sesgos de la capa oculta: b1 (vector de tamaño 1 x n)
 
-    Pesos de la capa de salida: W2 (matriz de tamaño n x m)
+  *  Pesos de la capa de salida: W2 (matriz de tamaño n x m)
 
-    Sesgos de la capa de salida: b2 (vector de tamaño 1 x m)
+  *  Sesgos de la capa de salida: b2 (vector de tamaño 1 x m)
 
 4. **Entrena la red neuronal** utilizando propagación hacia adelante y hacia atrás.
 
@@ -143,31 +143,31 @@ En esta fase, los datos de entrada se propagan a través de la red para obtener 
 
 Pasos:
 -(Forward Propagation)
-    Multiplicar las entradas por los pesos y sumar los sesgos.
+  *  Multiplicar las entradas por los pesos y sumar los sesgos.
 
-    Aplicar la función de activación ReLU en la capa oculta.
+  *  Aplicar la función de activación ReLU en la capa oculta.
 
-    Multiplicar la salida de la capa oculta por los pesos de la capa de salida y sumar los sesgos.
+  *  Multiplicar la salida de la capa oculta por los pesos de la capa de salida y sumar los sesgos.
 
-    Aplicar la función de activación Sigmoid en la capa de salida.
+  *  Aplicar la función de activación Sigmoid en la capa de salida.
 
 -(Loss)
-  Se utiliza la función de pérdida de entropía cruzada binaria (binary cross-entropy) para medir el error entre las predicciones y las etiquetas reales.
+*  Se utiliza la función de pérdida de entropía cruzada binaria (binary cross-entropy) para medir el error entre las predicciones y las etiquetas reales.
 
 -(Backpropagation)
 En esta fase, se calculan los gradientes de la pérdida con respecto a los pesos y sesgos para actualizarlos.
 
-    Calcular el gradiente de la pérdida con respecto a la salida (dA2).
+  *  Calcular el gradiente de la pérdida con respecto a la salida (dA2).
 
-    Calcular el gradiente de la pérdida con respecto a Z2 (capa de salida).
+  *  Calcular el gradiente de la pérdida con respecto a Z2 (capa de salida).
 
-    Calcular los gradientes de W2 y b2.
+  *  Calcular los gradientes de W2 y b2.
 
-    Calcular el gradiente de la pérdida con respecto a A1.
+  *  Calcular el gradiente de la pérdida con respecto a A1.
 
-    Calcular el gradiente de la pérdida con respecto a Z1 (capa oculta).
+  *  Calcular el gradiente de la pérdida con respecto a Z1 (capa oculta).
 
-    Calcular los gradientes de W1 y b1.
+  *  Calcular los gradientes de W1 y b1.
 
 Por último se actualizan los pesos y sesgos mediante el algoritmo del gradiente descendiente.
 Posterior a ello, la red neuronal se entrena mediante épocas definidas en el código
